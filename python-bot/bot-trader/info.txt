@@ -1,0 +1,10 @@
+    Bot Project
+Crypto Price APIs:
+- CoinGecko API
+- Binance API
+- CoinMarketCap API
+
+Python Libraries:
+python-telegram-bot 
+"pip install python-telegram-bot"
+"from telegram import Bot"
