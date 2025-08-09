@@ -1,7 +1,9 @@
+from funcao.identificacao_de_funcoes import *
+
 minhaLista = []
 
 print("preenchendo ...")
-PreencherInvetario(minhaLista)
+PreencherInventario(minhaLista)
 
 print("exibindo ...")
 ExibirInventario(minhaLista)
@@ -13,7 +15,7 @@ print("excluindo ...")
 DepreciarPorNome(minhaLista, 20)
 
 print("excluido ...")
-print(ExcluiPorSerial(minhaLista))
+print(ExcluirPorSerial(minhaLista))
 ExibirInventario(minhaLista)
 
 print("resumindo ...")
