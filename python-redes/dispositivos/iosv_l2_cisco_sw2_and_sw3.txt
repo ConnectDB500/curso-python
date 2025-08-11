@@ -1,0 +1,4 @@
+int g0/0
+switchport trunk encapsulation dotlq
+switchport mode trunk
+switchport trunk allowed vlan all

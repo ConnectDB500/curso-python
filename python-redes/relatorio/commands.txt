@@ -1,0 +1,6 @@
+show version | i Uptime
+show ip int brief
+show clock
+show snmp
+show processes cpu history
+show run | i domain

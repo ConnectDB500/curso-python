@@ -1,13 +1,16 @@
-from fpdf import FPDF
+def txt_to_md(input_file, output_file):
+    with open(input_file, 'r', encoding='utf-8') as txt_file:
+        lines = txt_file.readlines()
 
-# Read .txt file 
-with open("entrance.txt", "r", encoding="utf-8") as file:
-  text = file.read()
+    with open(output_file, 'w', encoding='utf-8') as md_file:
+        for line in lines:
+            # Exemplo de tratamento opcional: converter linhas com "TÃTULO:" em headings
+            if line.strip().upper().startswith("TÃTULO:"):
+                md_file.write(f"# {line.strip()[7:].strip()}\n\n")
+            else:
+                md_file.write(line)
 
-# Create a PDF with ,txt content
-pdf = FPDF()
-pdf.add_page()
-pdf.set_font("Arial", size=12)
-pdf.multi_cell(0, 10, text)
+    print(f"Arquivo Markdown criado com sucesso: {output_file}")
 
-pdf.output("exit.pdf")
+# Exemplo de uso:
+txt_to_md("entrada.txt", "saida.md")
